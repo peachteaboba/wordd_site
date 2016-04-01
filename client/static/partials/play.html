@@ -30,7 +30,7 @@
             </div>
             <div class="room-btn-wrapper" ng-repeat=" (key, value) in showRooms | Find: search||'' " ng-hide="key == currentRoom">
             <!--<div class="room-btn-wrapper" ng-repeat=" (key, value) in showRooms " ng-hide="key == currentRoom">-->
-                <button class="room-btn hvr-wobble-horizontal" ng-class="{ 'room-full' : value.status == 'full' }" id='{{key}}'><span class="room-name">Room Host:</span>{{value.name}}<span class="room-status">Status: <span>{{value.status}}</span></span></button>
+                <button ng-show="value.status != 'full'" class="room-btn hvr-wobble-horizontal" ng-class="{ 'room-full' : value.status == 'full' }" id='{{key}}'><span class="room-name">Room Host:</span>{{value.name}}<span class="room-status">Status: <span>{{value.status}}</span></span></button>
             </div>
 
 

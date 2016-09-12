@@ -38,21 +38,328 @@
 
 
 
-/* chatroom **************************/
 
 
 
-.chat-wrapper{
+
+
+
+
+.lb-chat-main-wrapper{
+    /*outline: 1px dotted white;*/
+    width: 100%;
+
+}
+
+.right-wrapper{
+    /*outline: 1px dotted yellow;*/
+    width: 60%;
     display: inline-block; vertical-align: top;
-    width: 70%;
+}
+
+.left-wrapper{
+    /*outline: 1px dotted yellow;*/
+    margin-right: 20px;
+    width: 37%;
+    min-height: 1800px;
+    display: inline-block; vertical-align: top;
+}
+
+.lb-wrapper{
+    background-color: #5C418C;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 25px 25px 200px 25px;
+    min-height: 1400px;
+}
+
+.lb-wrapper h1{
     color: white;
-    text-align: left !important;
+    font-size: 1.5em;
+}
+
+.lb-wrapper h2{
+    color: coral;
+}
+
+.top3{
+    margin-top: 15px;
+    /*outline: 1px dotted yellow;*/
+    width: 100%;
+    height: 170px;
+}
+.top3-2{
+    margin-top: 15px;
+    /*outline: 1px dotted yellow;*/
+    width: 100%;
+    height: 170px;
+    position: relative;
+    top: -100px;
+}
+.top3-3{
+    margin-top: 15px;
+    /*outline: 1px dotted yellow;*/
+    width: 100%;
+    height: 170px;
+    position: relative;
+    top: -200px;
+}
+
+
+.lb-first{
+    display: inline-block;
+    width: 100%;
+    height: 140px;
+    background: rgba(51,51,51,0.3);
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    /*border: 5px solid white;*/
+}
+
+.gold-img{
+    width: 170px;
+    position: relative;
+    top: -29px;
+    left: -40%;
+
+}
+
+.img-url-2{
+    width: 70px !important;
+    height: 70px !important;
+    float: left;
+    position: relative;
+    left: 10%;
+    top: -10px;
+    /*position: relative;*/
+    /*bottom: 195px;*/
+    overflow: hidden;
+    border-radius: 50%;
+    border: 6px solid white;
+}
+
+.rounded {
+    /*display: inline;*/
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
+}
+
+.one-icon{
+    width: 40px;
+}
+
+.lb1-info{
+    width: 55%;
+    float: right;
+    position: relative;
+    top: -145px;
+    /*outline: 1px dotted red;*/
+    padding-right: 10%;
+}
+.dn-wrapper{
+
+    text-align: left;
+    min-width: 200px;
+}
+
+.dn{
+    font-size: 1.1em;
+    margin-top: 2px;
+    color: #00B3FF;
+}
+
+.rn{
+    font-size: 0.8em;
+    color: grey;
+}
+
+.lb1-info h3{
+    font-weight: bolder;
+    font-size: 1.2em;
+    color: coral;
+    position: relative;
+    top: 6px;
+    left: -5px;
+}
+
+.lb1-info h3 span{
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    left: 5px;
+    color: coral !important;
+}
+
+
+
+
+
+
+
+
+.lb-rest-wrapper{
+    width: 100%;
+    min-height: 400px;
+    /*outline: 1px dotted white;*/
+    margin-top: 30px;
+}
+
+.lb-other{
+    /*outline: 1px dotted blue;*/
+    height: 70px;
+    display: block;
+    margin-bottom: 20px;
+    float: left;
+    width: 100%;
+    position: relative;
+    top: -280px;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    background: rgba(51,51,51,0.3);
+    border-radius: 35px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.rank{
+    min-width: 40px;
+    height: 40px;
+    line-height: 25px;
+    display: inline-block; vertical-align: top;
+    background-color: white;
+    font-size: 1.7em;
+    color: #ff4477;
+    border-radius: 2em;
+    padding: 10px;
+    float: left;
+    margin-top: 15px;
+    /*outline: 1px dotted red;*/
+}
+
+
+.rank2{
+    margin-top: 10px;
+    display: inline-block; vertical-align: top;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 5px solid white;
+    /*outline: 1px dotted red;*/
+    margin-left: 2%;
+}
+
+
+.dn-rn-wrapper{
+    margin-top: 13px;
+    display: inline-block; vertical-align: top;
+    /*outline: 1px dotted red;*/
+    padding: 5px;
+    margin-left: 2%;
+}
+
+
+
+
+.rank-dn{
+    font-size: 1.0em;
+    color: #00B3FF;
+}
+
+.rank-rn{
+    font-size: 0.8em;
+    color: grey;
+}
+
+
+.rank-s{
+    display: inline-block; vertical-align: top;
+    /*outline: 1px dotted red;*/
+    font-weight: bolder;
+    font-size: 1.2em;
+    color: coral !important;
+    margin-left: 2%;
+    margin-top: 25px;
+
+    float: right;
+
+
+}
+
+.coin-lb{
+    margin-right: 5px;
 
 }
 
 
-.conversation-wrapper{
 
+.lb-o-wrapper{
+    text-align: right;
+    display: inline-block; vertical-align: top;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* chatroom **************************/
+.chat-wrapper{
+    display: inline-block; vertical-align: top;
+    width: 67%;
+    color: white;
+    text-align: left !important;
+    /*outline: 1px dotted blue;*/
+}
+
+
+.conversation-wrapper{
     display: block;
     width:100%;
     height:250px;
@@ -62,6 +369,7 @@
     padding: 10px 40px 10px 40px;
     border-radius: 10px;
     line-height: 25px;
+    font-size: 0.8em;
 }
 .comment-form-wrapper{
     margin-top: 20px;
@@ -73,7 +381,7 @@
 }
 
 #data{
-    width:78%;
+    width:75%;
     /*min-width: 600px;*/
     height: 100%;
     padding-left: 20px;
@@ -84,7 +392,7 @@
 }
 #datasend{
     font-family: 'Varela Round', sans-serif;
-    width: 150px;
+    width: 17%;
     height: 30px;
     border-radius: 20px;
     margin-left: 10px;
@@ -136,11 +444,13 @@ b{
 }
 
 .room-wrapper{
+    width: 100%;
     margin-top: 20px;
     min-height: 200px;
     /*background: rgba(51,51,51,0.5);*/
     border-radius: 10px;
     padding: 10px 40px 40px 30px;
+    /*outline: 1px dotted green;*/
 }
 
 
@@ -163,12 +473,16 @@ b{
     min-height: 200px;
     background: rgba(51,51,51,0.5);
     border-radius: 10px;
-    padding: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    width: 100%;
+    /*outline: 1px dotted red;*/
+
 }
 
 .user-wrapper{
     display: inline-block; vertical-align: top;
-    width:15%;
+    width:25%;
     background: rgba(51,51,51,0.5);
     border-radius: 10px;
     /*border-right:1px solid black;*/
@@ -176,7 +490,7 @@ b{
     padding:10px;
     overflow: auto;
     /*outline: 1px dotted red;*/
-    margin-right: 20px;
+    margin-right: 15px;
 }
 
 .user-count{
@@ -198,6 +512,32 @@ b{
     font-family: 'Varela Round', sans-serif;
     font-size: 1.0em;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -5,45 +5,153 @@
 
 <div class="play-wrapper" ng-controller="GameController" ng-keypress="changed($event)">
 
-    <div class="user-chat-wrapper">
-        <div class='user-wrapper'>
-            <div id="user"></div>
-        </div>
-        <div class="chat-wrapper">
-            <div class='conversation-wrapper'>
-                <div id="conversation"></div>
+
+
+    <div class="lb-chat-main-wrapper">
+
+        <div class="left-wrapper">
+            <div class="lb-wrapper">
+
+                <h1>leaderboard</h1>
+                <h2>top 10</h2>
+
+
+                <div class="top3">
+                    <div class="lb-first">
+                        <img src="static/img/new/gold.png" class="gold-img">
+                        <img src="{{one.image_url}}" class="img-url-2 rounded hvr-pulse-grow" />
+                    </div>
+                    <div class="lb1-info">
+                        <img src="static/img/new/one.png" class="one-icon">
+                        <p class="dn">{{one.display_name}}</p>
+                        <p class="rn">{{one.real_name}}</p>
+                        <h3><img class="logo1 hvr-buzz" src="static/img/coin2.gif"><span>{{one.score}}</span></h3>
+                    </div>
+                </div>
+
+                <div class="top3-2">
+                    <div class="lb-first">
+                        <img src="static/img/new/silver.png" class="gold-img">
+                        <img src="{{two.image_url}}" class="img-url-2 rounded hvr-pulse-grow" />
+                    </div>
+                    <div class="lb1-info">
+                        <img src="static/img/new/two.png" class="one-icon">
+                        <p class="dn">{{two.display_name}}</p>
+                        <p class="rn">{{two.real_name}}</p>
+                        <h3><img class="logo1 hvr-buzz" src="static/img/coin2.gif"><span>{{two.score}}</span></h3>
+                    </div>
+                </div>
+
+                <div class="top3-3">
+                    <div class="lb-first">
+                        <img src="static/img/new/bronz.png" class="gold-img">
+                        <img src="{{three.image_url}}" class="img-url-2 rounded hvr-pulse-grow" />
+                    </div>
+                    <div class="lb1-info">
+                        <img src="static/img/new/three.png" class="one-icon">
+                        <p class="dn">{{three.display_name}}</p>
+                        <p class="rn">{{three.real_name}}</p>
+                        <h3><img class="logo1 hvr-buzz" src="static/img/coin2.gif"><span>{{three.score}}</span></h3>
+                    </div>
+                </div>
+
+
+                <div class="lb-rest-wrapper">
+
+
+                        <div class='lb-other' ng-repeat="user in leaderboard">
+                            <p class="rank">{{user.rank}}</p>
+
+
+
+
+                                <img src="{{user.image_url}}" class="rank2" />
+                                <div class="dn-rn-wrapper">
+                                    <p class="rank-dn">{{user.display_name}}</p>
+                                    <p class="rank-rn">{{user.real_name}}</p>
+                                </div>
+
+                                <p class="rank-s"><img class="logo1 hvr-buzz coin-lb" src="static/img/coin2.gif">{{user.score}}</p>
+
+
+
+                        </div>
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
             </div>
-            <div class="comment-form-wrapper">
-                <input id="data" type="text">
-                <input type="button" id="dataSend" value="send">
-            </div>
+
+
+
+
+
+
+
+
         </div>
+
+
+
+        <div class="right-wrapper">
+
+            <div class="user-chat-wrapper">
+                <div class='user-wrapper'>
+                    <div id="user"></div>
+                </div>
+                <div class="chat-wrapper">
+                    <div class='conversation-wrapper'>
+                        <div id="conversation"></div>
+                    </div>
+                    <div class="comment-form-wrapper">
+                        <input id="data" type="text">
+                        <input type="button" id="dataSend" value="send">
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+            <div class="room-wrapper">
+                <button id="new_game" class="hvr-shrink">create a new game</button>
+                <p> -or -</p>
+                <h5>click on a public game room below to join</h5>
+                <div class="rooms">
+                    <div class="search-rooms">
+                        <input class="search-box" type="text" ng-model="search" placeholder="search rooms..">
+                    </div>
+                    <div class="room-btn-wrapper" ng-repeat=" (key, value) in showRooms | Find: search||'' " ng-hide="key == currentRoom">
+                    <!--<div class="room-btn-wrapper" ng-repeat=" (key, value) in showRooms " ng-hide="key == currentRoom">-->
+                        <button ng-show="value.status != 'full'" class="room-btn hvr-wobble-horizontal" ng-class="{ 'room-full' : value.status == 'full' }" id='{{key}}'><span class="room-name">Room Host:</span>{{value.name}}<span class="room-status">Status: <span>{{value.status}}</span></span></button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
     </div>
-
-    <div class="room-wrapper">
-        <button id="new_game" class="hvr-shrink">create a new game</button>
-        <p> -or -</p>
-        <h5>click on a public game room below to join</h5>
-        <div class="rooms">
-            <div class="search-rooms">
-                <input class="search-box" type="text" ng-model="search" placeholder="search rooms..">
-            </div>
-            <div class="room-btn-wrapper" ng-repeat=" (key, value) in showRooms | Find: search||'' " ng-hide="key == currentRoom">
-            <!--<div class="room-btn-wrapper" ng-repeat=" (key, value) in showRooms " ng-hide="key == currentRoom">-->
-                <button ng-show="value.status != 'full'" class="room-btn hvr-wobble-horizontal" ng-class="{ 'room-full' : value.status == 'full' }" id='{{key}}'><span class="room-name">Room Host:</span>{{value.name}}<span class="room-status">Status: <span>{{value.status}}</span></span></button>
-            </div>
-
-
-
-        </div>
-
-
-
-    </div>
-
-
-
-
 
 
 
